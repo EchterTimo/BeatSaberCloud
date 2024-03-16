@@ -27,9 +27,9 @@ def download(folder_path):
     zip_file = os.path.join(TEMP_FOLDER, folder_path + '.zip')
 
     if os.path.exists(zip_file):
-        print("Download from cache")
+        print(f"Download from cache: {folder_path}")
     else:
-        print("Download using new zip")
+        print(f"Download using new zip: {folder_path}")
         # If the zip file doesn't exist in temp, zip the folder
         folder_to_zip = os.path.join(BASE_FOLDER, folder_path)
         os.makedirs(os.path.dirname(zip_file), exist_ok=True)
